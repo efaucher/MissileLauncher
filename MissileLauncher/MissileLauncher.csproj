@@ -33,12 +33,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_missile_50_ZOp_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="HidLibrary, Version=3.2.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\hidlibrary.3.2.8.0\lib\HidLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="MissileSharp, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MissileSharp.1.2\lib\net40\MissileSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -99,6 +99,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MissileSharp\MissileSharp.csproj">
+      <Project>{5b260fc8-dd55-40f3-a545-727bb7b6221b}</Project>
+      <Name>MissileSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_missile_50_ZOp_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

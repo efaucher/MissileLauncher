@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="MissileSharp.Launcher.Views.MessageBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="MissileSharp Launcher"
+        Height="150" Width="350"
+        ShowMinButton="False"
+        ShowMaxRestoreButton="False" 
+        ShowCloseButton="False"
+        Icon="logo.ico"
+        ShowTitleBar="True"
+        ShowIconOnTitleBar="true"
+        FocusManager.FocusedElement="{Binding ElementName=OkButton}">
+    <Grid>
+        <TextBlock Margin="5" Text="{Binding MessageText}" />
+        <Button 
+            Name="OkButton"
+            Content="OK"
+            Command="{Binding CloseCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
+            Height="30"
+            Margin="5"
+            VerticalAlignment="Bottom"
+            />
+    </Grid>
+</Controls:MetroWindow>
