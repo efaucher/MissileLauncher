@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MissileLauncher"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Missile Launcher" Height="131.949" Width="417.479" ResizeMode="CanMinimize" Icon="icons8_missile_50_ZOp_icon.ico">
+        Title="Missile Launcher" Height="156.616" Width="417.479" ResizeMode="CanMinimize" Icon="icons8_missile_50_ZOp_icon.ico">
     <Grid>
         <Button Content="Hugo" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Width="89" Click="Hugo_Click"/>
         <Button Content="An" HorizontalAlignment="Left" Margin="314,10,0,0" VerticalAlignment="Top" Width="89" Click="An_Click"/>
@@ -16,7 +16,8 @@
         <Button Content="Marc" HorizontalAlignment="Left" Margin="105,35,0,0" VerticalAlignment="Top" Width="89" Click="Marc_Click"/>
         <Button Content="Vincent" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="89" Click="Vincent_Click"/>
         <Button Content="Jean-Laurence" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="89" Click="JeanLaurence_Click"/>
-        <Button Content="FIRE!" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="393" Click="Fire_Click" />
+        <Button Content="FIRE!" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Width="393" Click="Fire_Click" />
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="393" Click="Reset_Click" />
 
     </Grid>
 </Window>
