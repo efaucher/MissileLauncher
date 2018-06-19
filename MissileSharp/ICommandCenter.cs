@@ -82,6 +82,31 @@ namespace MissileSharp
         Task<ICommandCenter> Right(int milliseconds);
 
         /// <summary>
+        /// Move up
+        /// </summary>
+        Task<ICommandCenter> Up();
+
+        /// <summary>
+        /// Move down
+        /// </summary>
+        Task<ICommandCenter> Down();
+
+        /// <summary>
+        /// Turn left
+        /// </summary>
+        Task<ICommandCenter> Left();
+
+        /// <summary>
+        /// Turn right
+        /// </summary>
+        Task<ICommandCenter> Right();
+
+        /// <summary>
+        /// Stop
+        /// </summary>
+        Task<ICommandCenter> Stop();
+
+        /// <summary>
         /// Reset the launcher position (=move to bottom left)
         /// </summary>
         Task<ICommandCenter> Reset();

@@ -195,7 +195,7 @@ namespace MissileSharp
         /// <param name="milliseconds">Time to move</param>
         public async Task<ICommandCenter> Left(int milliseconds)
         {
-            await  SendMoveCommand(launcher.Left, milliseconds);
+            await SendMoveCommand(launcher.Left, milliseconds);
             return this;
         }
 
@@ -239,8 +239,14 @@ namespace MissileSharp
 
             for (int i = 1; i <= numberOfShots; i++)
             {
-                await SendCommand(launcher.Fire);
-                Thread.Sleep(launcher.WaitAfterFire);
+                Task run = new Task(async () =>
+                {
+                    await SendCommand(launcher.Fire);
+                    Thread.Sleep(launcher.WaitAfterFire);
+                });
+
+                run.Start();
+                await run;
             }
 
             return this;
@@ -263,8 +269,12 @@ namespace MissileSharp
         /// <param name="command">The command to send</param>
         internal async Task SendCommand(byte command)
         {
-            var data = launcher.CreateCommand(command);
-            device.SendData(data);
+            Task run = new Task(() => {
+                var data = launcher.CreateCommand(command);
+                device.SendData(data);
+            });
+            run.Start();
+            await run;
         }
 
         /// <summary>
@@ -280,6 +290,44 @@ namespace MissileSharp
                 Thread.Sleep(milliseconds);
                 await SendCommand(launcher.Stop);
             }
+        }
+
+        internal async Task SendMoveCommand(byte command)
+        {
+            if (IsReady)
+            {
+                await SendCommand(command);
+            }
+        }
+
+        public async Task<ICommandCenter> Up()
+        {
+            await SendMoveCommand(launcher.Up);
+            return this;
+        }
+
+        public async Task<ICommandCenter> Down()
+        {
+            await SendMoveCommand(launcher.Down);
+            return this;
+        }
+
+        public async Task<ICommandCenter> Left()
+        {
+            await SendMoveCommand(launcher.Left);
+            return this;
+        }
+
+        public async Task<ICommandCenter> Right()
+        {
+            await SendMoveCommand(launcher.Right);
+            return this;
+        }
+
+        public async Task<ICommandCenter> Stop()
+        {
+            await SendMoveCommand(launcher.Stop);
+            return this;
         }
     }
 }

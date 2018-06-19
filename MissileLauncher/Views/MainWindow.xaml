@@ -3,21 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MissileLauncher"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Missile Launcher" Height="156.616" Width="417.479" ResizeMode="CanMinimize" Icon="icons8_missile_50_ZOp_icon.ico">
-    <Grid>
+        Title="Missile Launcher" Height="195.949" Width="437.479" ResizeMode="CanMinimize" Icon="/MissileLauncher;component/icons8_missile_50_ZOp_icon.ico">
+    <Grid Margin="0,0,0,9">
         <Button Content="Hugo" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Width="89" Click="Hugo_Click"/>
-        <Button Content="An" HorizontalAlignment="Left" Margin="314,10,0,0" VerticalAlignment="Top" Width="89" Click="An_Click"/>
+        <Button Content="Isham" HorizontalAlignment="Left" Margin="314,10,0,0" VerticalAlignment="Top" Width="89" Click="An_Click"/>
         <Button Content="Tim" HorizontalAlignment="Left" Margin="314,35,0,0" VerticalAlignment="Top" Width="89" Click="Tim_Click"/>
         <Button Content="Étienne" HorizontalAlignment="Left" Margin="219,35,0,0" VerticalAlignment="Top" Width="89" Click="Etienne_Click"/>
         <Button Content="Éric" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="89" Click="Eric_Click"/>
-        <Button Content="Marc" HorizontalAlignment="Left" Margin="105,35,0,0" VerticalAlignment="Top" Width="89" Click="Marc_Click"/>
+        <Button Content="An" HorizontalAlignment="Left" Margin="105,35,0,0" VerticalAlignment="Top" Width="89" Click="Marc_Click"/>
         <Button Content="Vincent" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="89" Click="Vincent_Click"/>
         <Button Content="Jean-Laurence" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="89" Click="JeanLaurence_Click"/>
         <Button Content="FIRE!" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Width="393" Click="Fire_Click" />
         <Button Content="Reset" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="393" Click="Reset_Click" />
-
+        <Button Content="Manual" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="393" Click="Manual_Click" />
     </Grid>
 </Window>

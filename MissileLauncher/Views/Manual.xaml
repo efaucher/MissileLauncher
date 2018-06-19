@@ -1,0 +1,18 @@
+﻿<Window x:Class="MissileLauncher.Manual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MissileLauncher"
+        mc:Ignorable="d"
+        Title="Manual" Height="151.766" Width="181.78"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" Icon="/MissileLauncher;component/icons8_missile_50_ZOp_icon.ico">
+    <Grid>
+        <Button Content="Up" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="75" Click="Up_Click"/>
+        <Button Content="Left" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="75" Click="Left_Click"/>
+        <Button Content="Right" HorizontalAlignment="Left" Margin="90,35,0,0" VerticalAlignment="Top" Width="75" Click="Right_Click"/>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="50,60,0,0" VerticalAlignment="Top" Width="75" Click="Down_Click"/>
+        <Button Content="Fire!" HorizontalAlignment="Left" Margin="34,93,0,0" VerticalAlignment="Top" Width="108" Click="Fire_Click"/>
+    </Grid>
+</Window>
